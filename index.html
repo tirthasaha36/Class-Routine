@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Routine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('college-background.jpg') no-repeat center center/cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #012f45;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .table-container {
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background: #ff758c;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+            }
+            table {
+                font-size: 12px;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h2, h3 {
+                font-size: 20px;
+            }
+            table {
+                font-size: 10px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>University of Engineering & Management, Jaipur</h1>
+    <h2>4th Semester - AIML</h2>
+    <h3>Classroom Routine (Monday - Friday)</h3>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>9:30 am - 10:30 am</th>
+                <th>10:30 am - 11:30 am</th>
+                <th>11:30 am - 12:30 pm</th>
+                <th>1:30 pm - 2:30 pm</th>
+                <th>2:30 pm - 3:30 pm</th>
+                <th>3:30 pm - 4:30 pm</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>CoA</td>
+                <td>JAVA</td>
+                <td>DAA</td>
+                <td>Math</td>
+                <td>JAVA Lab</td>
+                <td>JAVA Lab</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>AIML</td>
+                <td>CoA Lab</td>
+                <td>CoA Lab</td>
+                <td>JAVA</td>
+                <td>SDP</td>
+                <td>Data Analytics</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>JAVA</td>
+                <td>Finance</td>
+                <td>EVS</td>
+                <td>Finance</td>
+                <td>AIML Lab</td>
+                <td>AIML Lab</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>ESP</td>
+                <td>CoA</td>
+                <td>Math</td>
+                <td>AIML</td>
+                <td>DAA Lab</td>
+                <td>DAA Lab</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>DAA</td>
+                <td>CoA</td>
+                <td>Math</td>
+                <td>ESP</td>
+                <td>AIML</td>
+                <td>DAA</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
