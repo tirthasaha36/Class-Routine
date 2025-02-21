@@ -25,6 +25,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             backdrop-filter: blur(10px);
+            position: relative;
         }
         table {
             width: 100%;
@@ -33,11 +34,13 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            table-layout: fixed;
         }
         th, td {
             padding: 15px;
             border: 1px solid #ddd;
             text-align: center;
+            white-space: nowrap;
         }
         th {
             background: #ff758c;
@@ -45,6 +48,19 @@
         }
         tr:nth-child(even) {
             background: #f8f8f8;
+        }
+        /* Fix the first column */
+        th:first-child, td:first-child {
+            position: sticky;
+            left: 0;
+            background: #ff758c;
+            /* color: white; */
+            z-index: 2;
+        }
+        /* Ensure first column in rows has the same background as the rows */
+        td:first-child {
+            background: #fff;
+            font-weight: bold;
         }
         @media (max-width: 768px) {
             .table-container {
