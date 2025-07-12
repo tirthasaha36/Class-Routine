@@ -40,7 +40,7 @@
             padding: 15px;
             border: 1px solid #ddd;
             text-align: center;
-            white-space: nowrap;
+            white-space: normal;
         }
         th {
             background: #ff758c;
@@ -86,6 +86,19 @@
             th, td {
                 padding: 8px;
             }
+        }
+    </style>
+    <style>
+        #watermark {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            user-select: none;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
@@ -151,5 +164,6 @@
             </tr>
         </table>
     </div>
+    <div id="watermark">Made by Tirtha</div>
 </body>
 </html>
