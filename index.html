@@ -68,7 +68,7 @@
                 font-size: 12px;
                 display: block;
                 overflow-x: auto;
-                white-space: nowrap;
+                white-space: normal;
             }
             th, td {
                 padding: 10px;
@@ -79,10 +79,16 @@
                 font-size: 20px;
             }
             table {
-                font-size: 10px;
+                font-size: 12px;
+                table-layout: auto;
             }
-            th, td {
+            th:not(:first-child), td:not(:first-child) {
                 padding: 8px;
+                min-width: 110px;
+            }
+            th:first-child, td:first-child {
+                padding: 8px;
+                min-width: auto;
             }
         }
     </style>
