@@ -104,6 +104,28 @@
             z-index: 1000;
             font-family: Arial, sans-serif;
         }
+        /* Blinking red dot and live text style */
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 8px;
+            font-weight: bold;
+            color: red;
+            font-size: 0.9em;
+            user-select: none;
+        }
+        .live-indicator .dot {
+            height: 10px;
+            width: 10px;
+            background-color: red;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -128,7 +150,7 @@
                 <td>Neural Network & Deep Learning<br><span style="font-size: 0.8em; color: #555;">Dr. G Uma Devi</span></td>
                 <td>DBMS<br><span style="font-size: 0.8em; color: #555;">Prof. Jyoti Anand</span></td>
                 <td>Theory of Computations<br><span style="font-size: 0.8em; color: #555;">Prof. Pravesh Kumar Bansal</span></td>
-                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">PRN</span></td>
+                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">Prof. Prashant Ranjan</span></td>
             </tr>
             <tr>
                 <td>Tuesday</td>
@@ -144,7 +166,7 @@
                 <td>DBMS<br><span style="font-size: 0.8em; color: #555;">Prof. Jyoti Anand</span></td>
                 <td>Software Engineering Lab<br><span style="font-size: 0.8em; color: #555;">Dr. Rahul Kumar Garg</span></td>
                 <td>Software Engineering Lab<br><span style="font-size: 0.8em; color: #555;">Dr. Rahul Kumar Garg</span></td>
-                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">PRN</span></td>
+                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">Prof. Prashant Ranjan</span></td>
                 <td>Theory of Computations<br><span style="font-size: 0.8em; color: #555;">Prof. Pravesh Kumar Bansal</span></td>
                 <td>PROJECT/MAR/ MOOCS/IF<br><span style="font-size: 0.8em; color: #555;">-</span></td>
             </tr>
@@ -161,7 +183,7 @@
                 <td>Friday</td>
                 <td>DBMS<br><span style="font-size: 0.8em; color: #555;">Prof. Jyoti Anand</span></td>
                 <td>Operating Systems<br><span style="font-size: 0.8em; color: #555;">Prof. Hriday Banerjee</span></td>
-                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">PRN</span></td>
+                <td>Signals & Systems<br><span style="font-size: 0.8em; color: #555;">Prof. Prashant Ranjan</span></td>
                 <td>Theory of Computations<br><span style="font-size: 0.8em; color: #555;">Prof. Pravesh Kumar Bansal</span></td>
                 <td>Software Engineering<br><span style="font-size: 0.8em; color: #555;">Dr. Rahul Kumar Garg</span></td>
                 <td>Constitution of India<br><span style="font-size: 0.8em; color: #555;">Prof. Dipta Mukherjee</span></td>
