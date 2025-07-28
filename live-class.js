@@ -59,11 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const table = document.querySelector('.table-container table');
         if (!table) return;
 
-        // Remove previous highlights
+        // Remove previous highlights and live indicators
         table.querySelectorAll('td').forEach(td => {
             td.style.backgroundColor = '';
             td.style.color = '';
             td.style.fontWeight = '';
+            // Remove live indicator if exists
+            const liveIndicator = td.querySelector('.live-indicator');
+            if (liveIndicator) {
+                liveIndicator.remove();
+            }
         });
 
         // Get the row for the current day
@@ -75,10 +80,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const cell = row.cells[slotIndex];
         if (!cell) return;
 
-        // Highlight the live class cell
-        cell.style.backgroundColor = '#ff758c';
-        cell.style.color = 'white';
-        cell.style.fontWeight = 'bold';
+        // Add blinking live indicator only if not already present
+        if (!cell.querySelector('.live-indicator')) {
+            const liveIndicator = document.createElement('span');
+            liveIndicator.classList.add('live-indicator');
+
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+
+            const liveText = document.createElement('span');
+            liveText.textContent = 'Live';
+
+            liveIndicator.appendChild(dot);
+            liveIndicator.appendChild(liveText);
+
+            // Insert live indicator after the faculty name span with a line break
+            const facultySpan = cell.querySelector('span[style*="font-size: 0.8em"]');
+            if (facultySpan && facultySpan.parentNode) {
+                // Insert a <br> after facultySpan if not already present
+                if (!(facultySpan.nextSibling && facultySpan.nextSibling.nodeName === 'BR')) {
+                    const br = document.createElement('br');
+                    facultySpan.parentNode.insertBefore(br, facultySpan.nextSibling);
+                }
+                facultySpan.parentNode.insertBefore(liveIndicator, facultySpan.nextSibling.nextSibling);
+            } else {
+                // Fallback: append at the end of the cell
+                cell.appendChild(liveIndicator);
+            }
+        }
     }
 
     highlightLiveClass();
